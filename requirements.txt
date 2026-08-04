@@ -1,0 +1,3 @@
+# Root requirements.txt - Railway will detect this as a Python project
+# Then start.sh will install from backend/requirements.txt
+-r backend/requirements.txt
