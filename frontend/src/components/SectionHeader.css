@@ -1,0 +1,26 @@
+.section-header {
+  max-width: 660px;
+  margin-bottom: 44px;
+}
+
+.section-header--center {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.section-header__title {
+  margin-top: 18px;
+  font-size: clamp(1.75rem, 5vw, 2.75rem);
+}
+
+.section-header__subtitle {
+  margin-top: 16px;
+  color: var(--text-muted);
+  font-size: clamp(1rem, 2.4vw, 1.125rem);
+}
+
+@media (min-width: 768px) {
+  .section-header {
+    margin-bottom: 60px;
+  }
+}

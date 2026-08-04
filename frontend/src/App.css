@@ -1,0 +1,20 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  /* Ambient brand wash behind the whole page. */
+  background:
+    radial-gradient(
+      70rem 40rem at 50% -10rem,
+      rgba(109, 94, 252, 0.16),
+      transparent 65%
+    ),
+    var(--bg);
+}
+
+/* Pushes the footer to the bottom on short pages. */
+.app__main {
+  flex: 1 0 auto;
+  /* The navbar is sticky, so main starts below it without extra offset —
+     but the hero's own padding handles breathing room. */
+}

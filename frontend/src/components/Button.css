@@ -1,0 +1,119 @@
+.btn {
+  --btn-bg: transparent;
+  --btn-fg: var(--text);
+  --btn-border: transparent;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  /* 48px tall — comfortably above the 44px touch-target floor. */
+  min-height: 48px;
+  padding: 12px 22px;
+  border: 1px solid var(--btn-border);
+  border-radius: var(--r-full);
+  background: var(--btn-bg);
+  color: var(--btn-fg);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform var(--dur) var(--ease), filter var(--dur) var(--ease),
+    background var(--dur) var(--ease), border-color var(--dur) var(--ease),
+    box-shadow var(--dur) var(--ease), opacity var(--dur) var(--ease);
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn[disabled],
+.btn[aria-disabled='true'] {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* -------------------------------- variants ------------------------------- */
+
+.btn--primary {
+  --btn-bg: var(--gradient-brand);
+  --btn-fg: #0a0a12;
+  box-shadow: var(--shadow-brand);
+  font-weight: 700;
+}
+
+.btn--secondary {
+  --btn-bg: var(--surface-2);
+  --btn-fg: var(--text);
+  --btn-border: var(--border-strong);
+}
+
+.btn--ghost {
+  --btn-fg: var(--text-muted);
+}
+
+.btn--outline {
+  --btn-border: var(--border-strong);
+  --btn-fg: var(--text);
+}
+
+@media (hover: hover) {
+  .btn--primary:hover:not([disabled]) {
+    filter: brightness(1.08);
+    box-shadow: 0 16px 40px -12px rgba(109, 94, 252, 0.8);
+  }
+
+  .btn--secondary:hover:not([disabled]),
+  .btn--outline:hover:not([disabled]) {
+    background: var(--surface-3);
+    border-color: var(--brand-500);
+  }
+
+  .btn--ghost:hover:not([disabled]) {
+    color: var(--text);
+    background: var(--surface-2);
+  }
+}
+
+/* --------------------------------- sizes -------------------------------- */
+
+.btn--sm {
+  min-height: 42px;
+  padding: 9px 18px;
+  font-size: 0.875rem;
+}
+
+.btn--lg {
+  min-height: 54px;
+  padding: 15px 30px;
+  font-size: 1.02rem;
+}
+
+.btn--block {
+  width: 100%;
+}
+
+/* Full-width buttons on phones read better than side-by-side stubs. */
+@media (max-width: 519px) {
+  .btn--responsive-block {
+    width: 100%;
+  }
+}
+
+.btn__spinner {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  animation: spin 0.7s linear infinite;
+  flex-shrink: 0;
+}
+
+.btn__icon {
+  display: inline-flex;
+  flex-shrink: 0;
+}

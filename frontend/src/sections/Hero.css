@@ -1,0 +1,232 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56px;
+  padding-bottom: 72px;
+}
+
+.hero__glow-1 {
+  top: -180px;
+  left: -140px;
+  width: 420px;
+  height: 420px;
+  background: var(--brand-500);
+}
+
+.hero__glow-2 {
+  top: 120px;
+  right: -160px;
+  width: 360px;
+  height: 360px;
+  background: var(--accent-400);
+  opacity: 0.28;
+}
+
+.hero__inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 48px;
+}
+
+.hero__copy {
+  text-align: center;
+}
+
+.hero__title {
+  margin-top: 22px;
+  font-size: clamp(2.15rem, 8.5vw, 4.25rem);
+  letter-spacing: -0.035em;
+}
+
+.hero__subtitle {
+  margin-top: 20px;
+  margin-inline: auto;
+  max-width: 560px;
+  color: var(--text-muted);
+  font-size: clamp(1rem, 3vw, 1.2rem);
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.hero__trust {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 22px;
+  margin-top: 28px;
+}
+
+.hero__trust-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--text-dim);
+  font-size: 0.86rem;
+}
+
+.hero__trust-item svg {
+  color: var(--success);
+}
+
+/* --------------------------- before/after visual ------------------------- */
+
+.hero__visual {
+  position: relative;
+}
+
+.hero__compare {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding: 10px;
+  border-radius: var(--r-xl);
+  border: 1px solid var(--border-strong);
+  background: var(--surface);
+  box-shadow: var(--shadow-lg);
+}
+
+.hero__pane {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  border-radius: var(--r-md);
+  overflow: hidden;
+}
+
+.hero__pane--before {
+  background: linear-gradient(150deg, #3b3a6b, #232244 60%, #2e2b57);
+}
+
+.hero__pane-tag {
+  position: absolute;
+  z-index: 2;
+  bottom: 10px;
+  left: 10px;
+  padding: 5px 11px;
+  border-radius: var(--r-full);
+  background: rgba(8, 8, 15, 0.72);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: var(--text);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.hero__pane--after .hero__pane-tag {
+  background: rgba(8, 8, 15, 0.82);
+}
+
+/* Stand-in subject: a simple abstract figure, so no image assets are needed. */
+.hero__subject {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: end center;
+}
+
+.hero__subject-shape {
+  width: 62%;
+  height: 78%;
+  border-radius: 50% 50% 18% 18% / 60% 60% 12% 12%;
+  background: linear-gradient(160deg, #ffd9a8, #f0a875 55%, #d98b5f);
+  box-shadow: inset 0 -20px 40px rgba(0, 0, 0, 0.18);
+}
+
+.hero__subject-head {
+  position: absolute;
+  top: 12%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: linear-gradient(160deg, #ffe2bd, #f2b184);
+}
+
+.hero__badge {
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 15px;
+  border-radius: var(--r-full);
+  border: 1px solid var(--border-strong);
+  background: rgba(18, 18, 31, 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-md);
+  font-size: 0.82rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.hero__badge svg {
+  color: var(--accent-400);
+}
+
+.hero__badge--top {
+  top: -16px;
+  right: 12px;
+}
+
+.hero__badge--bottom {
+  bottom: -18px;
+  left: 12px;
+}
+
+@media (min-width: 640px) {
+  .hero__badge--top {
+    right: -20px;
+  }
+
+  .hero__badge--bottom {
+    left: -20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding-top: 72px;
+    padding-bottom: 96px;
+  }
+
+  .hero__compare {
+    gap: 12px;
+    padding: 14px;
+  }
+}
+
+/* Two-column layout once there's room for copy beside the visual. */
+@media (min-width: 1024px) {
+  .hero {
+    padding-top: 96px;
+    padding-bottom: 128px;
+  }
+
+  .hero__inner {
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: 64px;
+  }
+
+  .hero__copy {
+    text-align: left;
+  }
+
+  .hero__subtitle,
+  .hero__actions,
+  .hero__trust {
+    margin-inline: 0;
+    justify-content: flex-start;
+  }
+}

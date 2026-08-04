@@ -1,0 +1,155 @@
+.rbg {
+  position: relative;
+  overflow: hidden;
+  padding-block: 48px 80px;
+}
+
+.rbg__glow {
+  top: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 520px;
+  height: 380px;
+  background: var(--brand-500);
+  opacity: 0.35;
+}
+
+.rbg__inner {
+  position: relative;
+  z-index: 1;
+}
+
+.rbg__header {
+  max-width: 640px;
+  margin-inline: auto;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.rbg__title {
+  margin-top: 18px;
+  font-size: clamp(1.75rem, 6vw, 2.75rem);
+}
+
+.rbg__subtitle {
+  margin-top: 14px;
+  color: var(--text-muted);
+  font-size: clamp(0.98rem, 2.5vw, 1.1rem);
+}
+
+.rbg__card {
+  max-width: 960px;
+  margin-inline: auto;
+}
+
+.rbg__alert {
+  margin-bottom: 20px;
+}
+
+/* -------------------------------- panels -------------------------------- */
+
+.rbg__panels {
+  display: grid;
+  gap: 24px;
+}
+
+.rbg__result {
+  position: relative;
+  animation: fade-up 0.5s var(--ease) both;
+}
+
+.rbg__result-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: var(--r-full);
+  background: rgba(52, 211, 153, 0.16);
+  border: 1px solid rgba(52, 211, 153, 0.4);
+  color: #b6f2dc;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* -------------------------------- actions ------------------------------- */
+
+.rbg__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+/* --------------------------------- tips --------------------------------- */
+
+.rbg__tips {
+  display: grid;
+  gap: 10px;
+  max-width: 960px;
+  margin: 28px auto 0;
+}
+
+.rbg__tip {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--text-dim);
+  font-size: 0.87rem;
+}
+
+.rbg__tip svg {
+  flex-shrink: 0;
+  color: var(--success);
+}
+
+.rbg__note {
+  max-width: 960px;
+  margin: 24px auto 0;
+  padding: 14px 18px;
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--r-md);
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.rbg__note code {
+  padding: 2px 7px;
+  border-radius: 5px;
+  background: var(--surface-2);
+  color: var(--brand-300);
+  font-size: 0.85em;
+  /* Allow breaking rather than forcing horizontal scroll on narrow phones. */
+  overflow-wrap: anywhere;
+}
+
+@media (min-width: 768px) {
+  .rbg {
+    padding-block: 64px 104px;
+  }
+
+  .rbg__header {
+    margin-bottom: 40px;
+  }
+
+  .rbg__tips {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
+}
+
+/* Original and result sit side by side once both exist and there's room. */
+@media (min-width: 860px) {
+  .rbg__panels--split {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}

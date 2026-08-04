@@ -1,0 +1,134 @@
+.contact__grid {
+  display: grid;
+  gap: 32px;
+}
+
+/* ------------------------------- channels ------------------------------- */
+
+.contact__channels {
+  display: grid;
+  gap: 20px;
+  align-content: start;
+}
+
+.contact-channel {
+  display: flex;
+  gap: 14px;
+}
+
+.contact-channel__icon {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  border-radius: var(--r-md);
+  border: 1px solid var(--border-strong);
+  background: rgba(109, 94, 252, 0.12);
+  color: var(--brand-300);
+}
+
+.contact-channel__label {
+  font-size: 0.98rem;
+}
+
+.contact-channel__value {
+  display: inline-block;
+  margin-top: 3px;
+  color: var(--brand-300);
+  font-size: 0.92rem;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+  transition: color var(--dur) var(--ease);
+}
+
+.contact-channel__value:hover {
+  color: var(--accent-400);
+}
+
+.contact-channel__detail {
+  margin-top: 2px;
+  color: var(--text-dim);
+  font-size: 0.85rem;
+}
+
+/* --------------------------------- form --------------------------------- */
+
+.contact-form {
+  display: grid;
+  gap: 18px;
+}
+
+.field {
+  display: grid;
+  gap: 7px;
+}
+
+.field__label {
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.field__input {
+  width: 100%;
+  min-height: 48px;
+  padding: 13px 16px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--r-md);
+  background: var(--bg-soft);
+  color: var(--text);
+  /* 16px minimum stops iOS Safari zooming the page on focus. */
+  font-size: 1rem;
+  transition: border-color var(--dur) var(--ease),
+    box-shadow var(--dur) var(--ease), background var(--dur) var(--ease);
+}
+
+.field__input::placeholder {
+  color: var(--text-dim);
+}
+
+.field__input:focus {
+  outline: none;
+  border-color: var(--brand-500);
+  background: var(--surface-2);
+  box-shadow: 0 0 0 4px rgba(109, 94, 252, 0.18);
+}
+
+.field__input--error {
+  border-color: var(--danger);
+}
+
+.field__input--error:focus {
+  box-shadow: 0 0 0 4px rgba(255, 107, 107, 0.16);
+}
+
+.field__textarea {
+  min-height: 130px;
+  padding-top: 14px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.field__error {
+  color: var(--danger);
+  font-size: 0.83rem;
+}
+
+.contact-form__note {
+  color: var(--text-dim);
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+@media (min-width: 900px) {
+  .contact__grid {
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 56px;
+    align-items: start;
+  }
+
+  .contact__channels {
+    gap: 26px;
+  }
+}
