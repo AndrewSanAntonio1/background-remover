@@ -1,3 +1,12 @@
-# Root requirements.txt - Railway will detect this as a Python project
-# Then start.sh will install from backend/requirements.txt
--r backend/requirements.txt
+# Backend requirements
+# Install these directly (Railway will use this file)
+fastapi==0.115.5
+uvicorn[standard]==0.32.1
+python-multipart==0.0.20
+rembg==2.0.77
+onnxruntime==1.16.0
+pillow==10.2.0
+numpy>=1.23.0,<2
+scipy>=1.10.0
+scikit-image>=0.20.0
+pooch>=1.7.0

@@ -30,7 +30,7 @@ Your Background Remover application is **100% ready** for deployment to Vercel a
 ✅ **Configuration files created**:
 - `railway.toml` - Railway-specific config
 - `Procfile` - Process definition
-- `runtime.txt` - Python 3.12.0
+- `runtime.txt` - Python 3.11.13
 - `setup.py` - Package metadata
 
 ✅ **Production-ready features**:
@@ -126,7 +126,7 @@ Node Version:      18.x (auto)
 ### Backend Settings (Railway)
 ```
 Root Directory:    backend
-Runtime:           Python 3.12.0
+Runtime:           Python 3.11.13
 Start Command:     uvicorn app.main:app --host 0.0.0.0 --port $PORT
 Build System:      Nixpacks (auto)
 ```

@@ -67,7 +67,7 @@
 ### Fixed Issues ✅
 1. **CORS for Production**: Updated to use environment variables
 2. **Build Configuration**: Added Vercel and Railway configs
-3. **Python Runtime**: Specified Python 3.12.0
+3. **Python Runtime**: Specified Python 3.11.13
 4. **Start Command**: Configured for Railway deployment
 5. **Author Information**: Added to all package files
 

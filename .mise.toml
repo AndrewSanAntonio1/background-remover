@@ -1,0 +1,6 @@
+[settings]
+# python-build-standalone releases from before ~mid-2024 have no GitHub artifact
+# attestations, and mise verifies them by default -> "No GitHub artifact
+# attestations found". Railway's railpack builder runs `mise install`, so
+# disable the check here as well as via MISE_PYTHON_GITHUB_ATTESTATIONS.
+python.github_attestations = false

@@ -10,7 +10,7 @@ setup(
     author="Andrew San Antonio",
     author_email="sgandrew290@gmail.com",
     packages=find_packages(),
-    python_requires=">=3.12",
+    python_requires=">=3.10",
     install_requires=[
         "fastapi==0.115.5",
         "uvicorn[standard]==0.32.1",
