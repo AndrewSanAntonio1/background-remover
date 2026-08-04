@@ -1,5 +1,7 @@
 fastapi==0.115.5
 uvicorn[standard]==0.32.1
 python-multipart==0.0.20
-rembg[cpu]==2.0.77
+# rembg with CPU support and explicit dependencies
+rembg==2.0.77
+onnxruntime>=1.23.2,<2.0.0
 pillow>=12.1.0
