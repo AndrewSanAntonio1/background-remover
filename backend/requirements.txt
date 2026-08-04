@@ -1,7 +1,12 @@
 fastapi==0.115.5
 uvicorn[standard]==0.32.1
 python-multipart==0.0.20
-# rembg with CPU support and explicit dependencies
+# Background removal with explicit dependencies
 rembg==2.0.77
-onnxruntime>=1.23.2,<2.0.0
-pillow>=12.1.0
+onnxruntime==1.16.0
+pillow==10.2.0
+# Additional dependencies for rembg
+numpy>=1.23.0
+scipy>=1.10.0
+scikit-image>=0.20.0
+pooch>=1.7.0
